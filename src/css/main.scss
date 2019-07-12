@@ -1,0 +1,270 @@
+@import "mixins";
+@import "../content/fonts/Qanelas/Quanelas.css";
+
+
+$textColor: #292930;
+$accentColor: #FF6D70;
+$attentionColor: #E35A5F;
+$aGreen: #A2B457;
+
+html, body {
+  margin: 0;
+  font-family: "Qanelas Regular", "Roboto", sans-serif;
+  color: $textColor;
+}
+
+/* Стили для стандартных элементов */
+
+.ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.a {
+  text-decoration: none;
+  color: $textColor;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.h1, .h2, .h3 {
+  font-family: "Qanelas Bold", "Helvetica Neue", sans-serif;
+}
+
+/* Стилизация шапки сайта, с главным меню */
+
+.header {
+  display: flex;
+  height: 65px;
+
+  &__nav {
+    display: flex;
+    flex-basis: 100%;
+    font-size: 22px;
+    text-transform: uppercase;
+
+    .nav__ul {
+      width: 95%;
+      margin: 0 auto;
+      display: grid;
+      align-items: center;
+      grid-gap: 10px;
+      grid-template-columns: 0.5fr 2fr 2fr;
+
+      .nav__li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &:nth-child(2) {
+          justify-self: left;
+        }
+
+        &:last-child {
+          justify-self: right;
+        }
+      }
+    }
+
+    .nav__a {
+      transition: .3s;
+      justify-self: center;
+      margin-right: 10px;
+
+      &:hover {
+        color: $accentColor;
+      }
+
+      &:last-child { margin-right: 0; }
+    }
+  }
+
+  &__logo {
+    height: 40px;
+    width: auto;
+  }
+}
+
+/* Стили заголовка главной страницы */
+
+.mainPage-title {
+  font-family: "Qanelas Regular", "Helvetica Neue", sans-serif;
+  background: #292930;
+  text-align: center;
+
+  &__h1 {
+    font-family: "Qanelas Light", "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    padding: 30px 0;
+    color: white;
+  }
+}
+
+/* СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ
+
+Стили блока 'Who uses our platform?'
+*/
+
+.WUOP {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__subtext {
+    text-align: center;
+    font-family: "Qanelas Thin", "Roboto Light", sans-serif;
+    margin: 30px 0;
+  }
+
+  &__typesUsersList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    border: 2px solid $accentColor;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &__type {
+    font-family: "Qanelas Light", "Roboto Light", sans-serif;
+    transition: .3s;
+
+    &:hover { transform: scale(1.1); }
+  }
+
+  &__linkOnType {
+    font-size: 25px;
+    transition: .3s;
+
+    &:hover { color: $accentColor; }
+  }
+}
+
+/* Стили блока возможностей и преимуществ ASTREYA */
+
+.opportunities {
+  max-width: 960px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px repeat(3, auto);
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    display: grid;
+    padding: 0 50px;
+    grid-template-columns: 0.5fr 2fr;
+    grid-gap: 50px;
+    align-items: center;
+    margin: 25px 0;
+  }
+
+  &__image {
+    width: 160px;
+    justify-self: left;
+  }
+
+  &__desc {
+    justify-self: right;
+    font-size: 25px;
+    font-family: "Qanelas Light", "Roboto Light", sans-serif;
+  }
+}
+
+/* Styles for JoinUs section on main page */
+
+.JoinUs {
+  margin: 50px auto 0 auto;
+  padding: 50px 0;
+  background: #DDEDCA;
+
+  &__content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 50px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__role {
+    display: flex;
+    justify-content: space-around;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__RoleDesc {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__title--role {
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(115,115,133,0.6);
+  }
+
+  &__RoleDesc--span {
+    font-size: 20px;
+    font-family: "Qanelas Light", "Roboto Light", sans-serif;
+  }
+
+  &__RoleCover {
+    height: 180px;
+  }
+
+  &__button {
+    font-family: "Qanelas Regular", "Roboto", sans-serif;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: #42B37C;
+    border-radius: 5px;
+    border: 1px solid #292930;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.7);
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

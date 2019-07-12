@@ -1,0 +1,50 @@
+html, body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.App {
+
+}
+
+.header--main {
+
+}
+
+.nav--main {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+
+  grid-template-areas:
+  "n-logo n-list";
+}
+
+.logo--nav {
+  grid-area: n-logo;
+  align-self: center;
+}
+
+.logo--nav a > img {
+  height: 35px;
+}
+
+.nav__list {
+  grid-area: n-list;
+  align-self: center;
+
+  list-style: none;
+  display: flex;
+}
+
+.nav__list li {
+  margin-right: 10px;
+}
+
+.nav__list li a {
+  text-decoration: none;
+  color: #282c34;
+  font-size: 22px;
+}
