@@ -1,0 +1,77 @@
+.RegForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  width: fit-content;
+  padding: 50px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: -5px 5px 8px 4px rgba(29, 29, 30, 0.3);
+  opacity: 0;
+
+  &__form {
+    opacity: 0;
+    animation: ShowForm 0.5s forwards ease-in-out;
+    border-radius: 7px;
+    max-width: 960px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+
+  &__field {
+    display: block;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    background: white;
+    color: #292930;
+    font-family: "Qanelas Regular", "Roboto Light", sans-serif;
+    transition: 0.3s;
+
+    &:focus {
+      background: darken(#fff, 3%);
+    }
+
+    &:first-child {
+      border-radius: 7px 7px 0 0;
+    }
+  }
+
+  &__submit {
+    width: 400px;
+    box-sizing: border-box;
+    padding: 18px;
+    background: #FF6D70;
+    color: white;
+    font-size: 18px;
+    border-radius: 0 0 7px 7px;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken(#FF6D70, 2%);
+    }
+  }
+
+  &__field, &__submit {
+    outline: none;
+  }
+}
+
+@keyframes ShowForm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,71 @@
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  width: fit-content;
+  padding: 50px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: -5px 5px 8px 4px rgba(29, 29, 30, 0.3);
+}
+.LoginForm__title {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+.LoginForm__form {
+  border-radius: 7px;
+  max-width: 960px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: ShowForm 0.5s forwards ease-in-out;
+}
+.LoginForm__field {
+  display: block;
+  width: 400px;
+  box-sizing: border-box;
+  padding: 18px;
+  font-size: 18px;
+  border: none;
+  background: white;
+  color: #292930;
+  font-family: "Qanelas Regular", "Roboto Light", sans-serif;
+  transition: 0.3s;
+}
+.LoginForm__field:focus {
+  background: #f7f7f7;
+}
+.LoginForm__field:first-child {
+  border-radius: 7px 7px 0 0;
+}
+.LoginForm__submit {
+  width: 400px;
+  box-sizing: border-box;
+  padding: 18px;
+  background: #ff6d70;
+  color: white;
+  font-size: 18px;
+  border-radius: 0 0 7px 7px;
+  transition: 0.3s;
+}
+.LoginForm__submit:hover {
+  background: #ff6366;
+}
+.LoginForm__field,
+.LoginForm__submit {
+  outline: none;
+}
+
+@keyframes ShowForm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=LoginForm.module.css.map */

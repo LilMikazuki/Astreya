@@ -1,0 +1,34 @@
+@import "../../../css/virables";
+
+.that {
+  max-width: 960px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px repeat(3, auto);
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    display: grid;
+    padding: 0 50px;
+    grid-template-columns: 0.5fr 2fr;
+    grid-gap: 50px;
+    align-items: center;
+    margin: 25px 0;
+  }
+
+  &__image {
+    width: 160px;
+    justify-self: left;
+  }
+
+  &__desc {
+    justify-self: right;
+    font-size: 25px;
+    font-family: "Qanelas Light", "Roboto Light", sans-serif;
+  }
+}

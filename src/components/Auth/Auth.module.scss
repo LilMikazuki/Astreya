@@ -1,0 +1,80 @@
+@import "../../css/virables";
+
+.AuthPage {
+  height: 100%;
+  background-size: 200% 100% !important;
+  animation: move 10s ease infinite;
+  background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+
+  &__Cover {
+    width: 400px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 150px auto;
+    padding: 50px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: -5px 5px 8px 4px rgba(29, 29, 30, 0.3);
+    transition: 1s;
+  }
+
+  &__sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__section {
+    font-size: 20px;
+    transition: .3s;
+
+    &:not(.active) {
+      color: $secondary-text-color;
+    }
+
+    &:hover {
+      color: $accentColor;
+    }
+
+    &.active {
+      cursor: default;
+      color: $primary-text-color;
+      font-size: 25px;
+    }
+  }
+}
+
+.tremor {
+  animation: Tremor 0.1s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0
+  }
+  50% {
+    background-position: 100% 0
+  }
+  100% {
+    background-position: 0 0
+  }
+}
+
+@keyframes Tremor {
+  0%, 25% {
+    left: -1px;
+    -webkit-transform: translateX(-1%);
+    transform: translateX(-1%) rotate(-2deg);
+  }
+  50%, 100% {
+    left: 1px;
+    -webkit-transform: translateX(1%);
+    transform: translateX(1%) rotate(2deg);
+  }
+}

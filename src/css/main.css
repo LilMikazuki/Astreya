@@ -1,191 +1,60 @@
 @charset "UTF-8";
 @import url(../content/fonts/Qanelas/Quanelas.css);
-html, body {
+html,
+body {
   margin: 0;
   font-family: "Qanelas Regular", "Roboto", sans-serif;
-  color: #292930; }
+  color: #292930;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+#root .App {
+  height: inherit;
+}
 
 /* Стили для стандартных элементов */
-.ul {
+ul {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+}
 
-.a {
+a {
   text-decoration: none;
-  color: #292930; }
+  color: #292930;
+}
 
-.h1 {
+h1 {
   margin: 0;
-  font-size: 32px; }
+  font-size: 32px;
+}
 
-.h2 {
+h2 {
   margin: 0;
-  font-size: 28px; }
+  font-size: 28px;
+}
 
-.h3 {
+h3 {
   margin: 0;
-  font-size: 24px; }
+  font-size: 24px;
+}
 
-.h1, .h2, .h3 {
-  font-family: "Qanelas Bold", "Helvetica Neue", sans-serif; }
+h1,
+h2,
+h3 {
+  font-family: "Qanelas Bold", "Helvetica Neue", sans-serif;
+}
 
-/* Стилизация шапки сайта, с главным меню */
-.header {
+.form {
   display: flex;
-  height: 65px; }
-  .header__nav {
-    display: flex;
-    flex-basis: 100%;
-    font-size: 22px;
-    text-transform: uppercase; }
-    .header__nav .nav__ul {
-      width: 95%;
-      margin: 0 auto;
-      display: grid;
-      align-items: center;
-      grid-gap: 10px;
-      grid-template-columns: 0.5fr 2fr 2fr; }
-      .header__nav .nav__ul .nav__li {
-        display: grid;
-        grid-template-columns: 1fr 1fr; }
-        .header__nav .nav__ul .nav__li:nth-child(2) {
-          justify-self: left; }
-        .header__nav .nav__ul .nav__li:last-child {
-          justify-self: right; }
-    .header__nav .nav__a {
-      transition: .3s;
-      justify-self: center;
-      margin-right: 10px; }
-      .header__nav .nav__a:hover {
-        color: #FF6D70; }
-      .header__nav .nav__a:last-child {
-        margin-right: 0; }
-  .header__logo {
-    height: 40px;
-    width: auto; }
+  flex-direction: column;
+}
 
-/* Стили заголовка главной страницы */
-.mainPage-title {
-  font-family: "Qanelas Regular", "Helvetica Neue", sans-serif;
-  background: #292930;
-  text-align: center; }
-  .mainPage-title__h1 {
-    font-family: "Qanelas Light", "Helvetica Neue", sans-serif;
-    font-weight: normal;
-    padding: 30px 0;
-    color: white; }
-
-/* СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ
-
-Стили блока 'Who uses our platform?'
-*/
-.WUOP {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
-  .WUOP__title {
-    margin: 50px 0;
-    text-align: center;
-    text-transform: uppercase; }
-  .WUOP__subtext {
-    text-align: center;
-    font-family: "Qanelas Thin", "Roboto Light", sans-serif;
-    margin: 30px 0; }
-  .WUOP__typesUsersList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px;
-    grid-gap: 10px;
-    justify-items: center;
-    align-items: center;
-    border: 2px solid #FF6D70;
-    padding: 20px 0;
-    margin: 0 auto;
-    width: 80%; }
-  .WUOP__type {
-    font-family: "Qanelas Light", "Roboto Light", sans-serif;
-    transition: .3s; }
-    .WUOP__type:hover {
-      transform: scale(1.1); }
-  .WUOP__linkOnType {
-    font-size: 25px;
-    transition: .3s; }
-    .WUOP__linkOnType:hover {
-      color: #FF6D70; }
-
-/* Стили блока возможностей и преимуществ ASTREYA */
-.opportunities {
-  max-width: 960px;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px repeat(3, auto); }
-  .opportunities__title {
-    text-align: center;
-    text-transform: uppercase; }
-  .opportunities__item {
-    display: grid;
-    padding: 0 50px;
-    grid-template-columns: 0.5fr 2fr;
-    grid-gap: 50px;
-    align-items: center;
-    margin: 25px 0; }
-  .opportunities__image {
-    width: 160px;
-    justify-self: left; }
-  .opportunities__desc {
-    justify-self: right;
-    font-size: 25px;
-    font-family: "Qanelas Light", "Roboto Light", sans-serif; }
-
-/* Styles for JoinUs section on main page */
-.JoinUs {
-  margin: 50px auto 0 auto;
-  padding: 50px 0;
-  background: #DDEDCA; }
-  .JoinUs__content {
-    max-width: 960px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-gap: 50px; }
-  .JoinUs__title {
-    text-align: center;
-    text-transform: uppercase; }
-  .JoinUs__role {
-    display: flex;
-    justify-content: space-around; }
-    .JoinUs__role:first-child {
-      margin-right: 20px; }
-  .JoinUs__RoleDesc {
-    display: grid;
-    grid-template-columns: 1fr; }
-  .JoinUs__title--role {
-    text-transform: uppercase;
-    text-shadow: 0 0 5px rgba(115, 115, 133, 0.6); }
-  .JoinUs__RoleDesc--span {
-    font-size: 20px;
-    font-family: "Qanelas Light", "Roboto Light", sans-serif; }
-  .JoinUs__RoleCover {
-    height: 180px; }
-  .JoinUs__button {
-    font-family: "Qanelas Regular", "Roboto", sans-serif;
-    outline: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-    background: #42B37C;
-    border-radius: 5px;
-    border: 1px solid #292930;
-    width: 300px;
-    height: 40px;
-    text-align: center;
-    transition: .3s;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7); }
-    .JoinUs__button:active {
-      transform: scale(0.95); }
+.button {
+  border: none;
+}
 
 /*# sourceMappingURL=main.css.map */

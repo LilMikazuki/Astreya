@@ -1,0 +1,56 @@
+/* Стилизация шапки сайта, с главным меню */
+@import "../../css/virables";
+
+.header {
+  display: flex;
+  height: 65px;
+  background: white;
+
+
+  &__nav {
+    display: flex;
+    flex-basis: 100%;
+    font-size: 22px;
+    text-transform: uppercase;
+
+    .nav__ul {
+      width: 95%;
+      margin: 0 auto;
+      display: grid;
+      align-items: center;
+      grid-gap: 20px;
+      grid-template-columns: 0.5fr 2fr 2fr;
+
+      .nav__li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &:nth-child(2) {
+          justify-self: left;
+        }
+
+        &:last-child {
+          grid-template-columns: 1fr;
+          justify-self: right;
+        }
+      }
+    }
+
+    .nav__a {
+      transition: .3s;
+      justify-self: center;
+      margin-right: 15px;
+
+      &:hover {
+        color: $accentColor;
+      }
+
+      &:last-child { margin-right: 0; }
+    }
+  }
+
+  &__logo {
+    height: 40px;
+    width: auto;
+  }
+}

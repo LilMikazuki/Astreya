@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*Стили блока 'Who uses our platform?'*/
+.WUOP {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.WUOP__title {
+  margin: 50px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.WUOP__subtext {
+  text-align: center;
+  font-family: "Qanelas Thin", "Roboto Light", sans-serif;
+  margin: 30px 0;
+}
+.WUOP__typesUsersList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px;
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid #ff6d70;
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 80%;
+}
+.WUOP__type {
+  font-family: "Qanelas Light", "Roboto Light", sans-serif;
+  transition: 0.3s;
+}
+.WUOP__type:hover {
+  transform: scale(1.1);
+}
+.WUOP__linkOnType {
+  font-size: 25px;
+  transition: 0.3s;
+}
+.WUOP__linkOnType:hover {
+  color: #ff6d70;
+}
+
+/*# sourceMappingURL=WUOP.module.css.map */

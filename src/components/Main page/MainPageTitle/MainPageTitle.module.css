@@ -1,0 +1,13 @@
+.title {
+  font-family: "Qanelas Regular", "Helvetica Neue", sans-serif;
+  background: #292930;
+  text-align: center;
+}
+.title__h1 {
+  font-family: "Qanelas Light", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  padding: 30px 0;
+  color: white;
+}
+
+/*# sourceMappingURL=MainPageTitle.module.css.map */

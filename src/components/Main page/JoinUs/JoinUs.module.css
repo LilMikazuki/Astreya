@@ -1,0 +1,88 @@
+@charset "UTF-8";
+.JUs {
+  margin: 50px auto 0 auto;
+  padding: 50px 0;
+  background: #ddedca;
+  user-select: none;
+}
+.JUs__content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 50px;
+}
+.JUs__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.JUs__role {
+  display: flex;
+  justify-content: space-around;
+}
+.JUs__role:first-child {
+  margin-right: 20px;
+}
+.JUs__RoleDesc {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.JUs__title--role {
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(115, 115, 133, 0.6);
+}
+.JUs__RoleDesc--span {
+  font-size: 20px;
+  font-family: "Qanelas Light", "Roboto Light", sans-serif;
+}
+.JUs__RoleCover {
+  height: 180px;
+}
+.JUs__button {
+  font-family: "Qanelas Regular", "Roboto", sans-serif;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to right, #42b37c 30%, #ff6d70 80%);
+  background-size: 500%;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #292930;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+  animation: change_color_reverse 1.5s forwards;
+}
+.JUs__button:hover {
+  animation: change_color 1.5s forwards;
+}
+.JUs__button:active {
+  transform: scale(0.95);
+}
+
+/*
+Изменение цвета фона у кнопки .JoinUs__button
+Changing background color of button JoinUs__button
+ */
+@keyframes change_color {
+  0% {
+    background-position: 30% 80%;
+  }
+  100% {
+    background-position: 65%;
+  }
+}
+@keyframes change_color_reverse {
+  0% {
+    background-position: 65%;
+  }
+  100% {
+    background-position: 30% 80%;
+  }
+}
+
+/*# sourceMappingURL=JoinUs.module.css.map */

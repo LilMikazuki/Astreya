@@ -1,0 +1,100 @@
+@import "../../../css/virables";
+
+.JUs {
+  margin: 50px auto 0 auto;
+  padding: 50px 0;
+  background: #DDEDCA;
+  user-select: none;
+
+  &__content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 50px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__role {
+    display: flex;
+    justify-content: space-around;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__RoleDesc {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__title--role {
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(115,115,133,0.6);
+  }
+
+  &__RoleDesc--span {
+    font-size: 20px;
+    font-family: "Qanelas Light", "Roboto Light", sans-serif;
+  }
+
+  &__RoleCover {
+    height: 180px;
+  }
+
+  &__button {
+    font-family: "Qanelas Regular", "Roboto", sans-serif;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right, #42B37C 30%, #FF6D70 80%);
+    background-size: 500%;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #292930;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.7);
+    animation: change_color_reverse 1.5s forwards;
+
+    &:hover {
+      animation: change_color 1.5s forwards;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+/*
+Изменение цвета фона у кнопки .JoinUs__button
+Changing background color of button JoinUs__button
+ */
+@keyframes change_color {
+  0% {
+    background-position: 30% 80%;
+  }
+  100% {
+    background-position: 65%;
+  }
+}
+
+@keyframes change_color_reverse {
+  0% {
+    background-position: 65%;
+  }
+  100% {
+    background-position: 30% 80%;
+  }
+}
+

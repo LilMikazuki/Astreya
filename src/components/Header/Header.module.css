@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* Стилизация шапки сайта, с главным меню */
+.header {
+  display: flex;
+  height: 65px;
+  background: white;
+}
+.header__nav {
+  display: flex;
+  flex-basis: 100%;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.header__nav .nav__ul {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-gap: 20px;
+  grid-template-columns: 0.5fr 2fr 2fr;
+}
+.header__nav .nav__ul .nav__li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.header__nav .nav__ul .nav__li:nth-child(2) {
+  justify-self: left;
+}
+.header__nav .nav__ul .nav__li:last-child {
+  grid-template-columns: 1fr;
+  justify-self: right;
+}
+.header__nav .nav__a {
+  transition: 0.3s;
+  justify-self: center;
+  margin-right: 15px;
+}
+.header__nav .nav__a:hover {
+  color: #ff6d70;
+}
+.header__nav .nav__a:last-child {
+  margin-right: 0;
+}
+.header__logo {
+  height: 40px;
+  width: auto;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

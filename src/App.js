@@ -1,22 +1,19 @@
-import React from 'react';
-import logo from './content/logo.svg';
-import './css/main.css';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+
+import "./css/main.css";
 
 // My components#
-import Header from './components/Header'
-import Title from "./components/MainPage Title";
-import WUOP from "./components/WUOP";
-import Opportunities from "./components/Opportunities";
-import JoinUs from "./components/JoinUs";
+import MainPage from "./components/Main page/MainPage";
+import Auth from "./components/Auth/Auth";
 
 function App() {
   return (
-    <div className="MainPage">
-        <Header/>
-        <Title/>
-        <WUOP/>
-        <Opportunities/>
-        <JoinUs/>
+    <div className={"App"}>
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/auth" component={Auth} />
+      </Switch>
     </div>
   );
 }
